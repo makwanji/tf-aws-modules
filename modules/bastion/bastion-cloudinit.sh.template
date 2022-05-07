@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "${bastion_users}" >> /home/ubuntu/.ssh/authorized_keys
+echo "${public_key}" >> /home/ubuntu/.ssh/id_rsa.pub
+echo "${private_key}" >> /home/ubuntu/.ssh/id_rsa
+chmod 0600 /home/ubuntu/.ssh/id_rsa*
+chown ubuntu:ubuntu /home/ubuntu/.ssh/id_rsa*
